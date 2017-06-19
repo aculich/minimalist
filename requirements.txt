@@ -1,2 +1,2 @@
-datascience==0.10.0
-okpy==1.11.0
+#datascience==0.10.0
+#okpy==1.11.0
