@@ -255,69 +255,67 @@ RUN pip install git+https://github.com/jupyterhub/nbserverproxy; \
 USER $NB_USER
 
 
-# RUN conda install --quiet --yes \
-#     matplotlib==2.0.0 \
-#     numpy==1.12.1 \
-#     pandas==0.19.2 \
-#     scipy==0.19.0 \
-#     statsmodels==0.8.0
-#     'nomkl' \
-#     'pandas=0.19*' \
-#     'numexpr=2.6*' \
-#     'matplotlib=2.0*' \
-#     'scipy=0.19*' \
-#     'seaborn=0.7*' \
-#     'scikit-learn=0.18*' \
-#     'scikit-image=0.12*' \
-#     'sympy=1.0*' \
-#     'cython=0.25*' \
-#     'patsy=0.4*' \
-#     'statsmodels=0.8*' \
-#     'cloudpickle=0.2*' \
-#     'dill=0.2*' \
-#     'numba=0.31*' \
-#     'bokeh=0.12*' \
-#     'hdf5=1.8.17' \
-#     'h5py=2.6*' \
-#     'sqlalchemy=1.1*' \
-#     'pyzmq' \
-#     'vincent=0.4.*' \
-#     'beautifulsoup4=4.5.*' \
-#     'xlrd' && \
-#     conda remove -n python2 --quiet --yes --force qt pyqt && \
-#     conda clean -tipsy
+RUN conda install --quiet --yes \
+    matplotlib==2.0.0 \
+    numpy==1.12.1 \
+    pandas==0.19.2 \
+    scipy==0.19.0 \
+    statsmodels==0.8.0 \
+    'nomkl' \
+    'pandas=0.19*' \
+    'numexpr=2.6*' \
+    'matplotlib=2.0*' \
+    'scipy=0.19*' \
+    'seaborn=0.7*' \
+    'scikit-learn=0.18*' \
+    'scikit-image=0.12*' \
+    'sympy=1.0*' \
+    'cython=0.25*' \
+    'patsy=0.4*' \
+    'statsmodels=0.8*' \
+    'cloudpickle=0.2*' \
+    'dill=0.2*' \
+    'numba=0.31*' \
+    'bokeh=0.12*' \
+    'hdf5=1.8.17' \
+    'h5py=2.6*' \
+    'sqlalchemy=1.1*' \
+    'pyzmq' \
+    'vincent=0.4.*' \
+    'beautifulsoup4=4.5.*' \
+    'xlrd' && \
+    conda clean -tipsy
 
-# RUN conda install --quiet --yes -n python2 \
-#     matplotlib==2.0.0 \
-#     numpy==1.12.1 \
-#     pandas==0.19.2 \
-#     scipy==0.19.0 \
-#     statsmodels==0.8.0 \
-#     'nomkl' \
-#     'pandas=0.19*' \
-#     'numexpr=2.6*' \
-#     'matplotlib=2.0*' \
-#     'scipy=0.19*' \
-#     'seaborn=0.7*' \
-#     'scikit-learn=0.18*' \
-#     'scikit-image=0.12*' \
-#     'sympy=1.0*' \
-#     'cython=0.25*' \
-#     'patsy=0.4*' \
-#     'statsmodels=0.8*' \
-#     'cloudpickle=0.2*' \
-#     'dill=0.2*' \
-#     'numba=0.31*' \
-#     'bokeh=0.12*' \
-#     'hdf5=1.8.17' \
-#     'h5py=2.6*' \
-#     'sqlalchemy=1.1*' \
-#     'pyzmq' \
-#     'vincent=0.4.*' \
-#     'beautifulsoup4=4.5.*' \
-#     'xlrd' && \
-#     conda remove -n python2 --quiet --yes --force qt pyqt && \
-#     conda clean -tipsy
+RUN conda install --quiet --yes -n python2 \
+    matplotlib==2.0.0 \
+    numpy==1.12.1 \
+    pandas==0.19.2 \
+    scipy==0.19.0 \
+    statsmodels==0.8.0 \
+    'nomkl' \
+    'pandas=0.19*' \
+    'numexpr=2.6*' \
+    'matplotlib=2.0*' \
+    'scipy=0.19*' \
+    'seaborn=0.7*' \
+    'scikit-learn=0.18*' \
+    'scikit-image=0.12*' \
+    'sympy=1.0*' \
+    'cython=0.25*' \
+    'patsy=0.4*' \
+    'statsmodels=0.8*' \
+    'cloudpickle=0.2*' \
+    'dill=0.2*' \
+    'numba=0.31*' \
+    'bokeh=0.12*' \
+    'hdf5=1.8.17' \
+    'h5py=2.6*' \
+    'sqlalchemy=1.1*' \
+    'pyzmq' \
+    'vincent=0.4.*' \
+    'beautifulsoup4=4.5.*' \
+    'xlrd' && \
+    conda clean -tipsy
 
 EXPOSE 8888
 USER $NB_USER
